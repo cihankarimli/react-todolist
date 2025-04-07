@@ -8,10 +8,14 @@ function TodoCreate({createTodo}) {
        const createNewtodo=()=>{
               if(!todo) return;
               const request={
-                content : todo
+               id:Math.floor(Math.random()*999999),
+               content : todo
+              
+               
               } 
-
-              createTodo(request);
+           
+              
+            createTodo(request);
               inputClear();
               
        }

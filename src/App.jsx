@@ -9,11 +9,15 @@ const[todos,setTodos]=useState([])
 const createNewtodo=(newTodo=>{
   setTodos([...todos,newTodo])
 })
+const removeTodo=((todoId)=>{
+   setTodos([...todos.filter((todo)=>todo.id!==todoId)])
+
+})
   return (
     <>
     <div className='main'>
     <TodoCreate  createTodo= {createNewtodo}/>
-    <TodoList todos={todos}/>
+    <TodoList todos={todos} removeTodo={removeTodo}/>
     </div>
    
     </>
