@@ -15,7 +15,6 @@ body {
   padding: 20px;
 }
 
-/* Main container */
 .main {
   width: 100%;
   max-width: 600px;
@@ -29,7 +28,6 @@ body {
   gap: 20px;
 }
 
-/* Todo Create component */
 .TodoCreate {
   display: flex;
   gap: 10px;
@@ -75,7 +73,6 @@ body {
   transform: translateY(1px);
 }
 
-/* Todo List component */
 div[style*="width:100%,marginTop:50px"] {
   display: flex;
   flex-direction: column;
@@ -83,7 +80,6 @@ div[style*="width:100%,marginTop:50px"] {
   margin-top: 30px;
 }
 
-/* Todo item */
 div[style*="display:flex"] {
   display: flex !important;
   justify-content: space-between !important;
@@ -102,14 +98,12 @@ div[style*="display:flex"]:hover {
   border-color: #d0d0d0;
 }
 
-/* Todo content */
 div[style*="display:flex"] > div:first-child {
   font-size: 16px;
   word-break: break-word;
   padding-right: 10px;
 }
 
-/* Todo icon */
 .todo-icons {
   color: #888;
   font-size: 22px;
@@ -121,7 +115,6 @@ div[style*="display:flex"] > div:first-child {
   transform: scale(1.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
   .main {
     padding: 20px;
