@@ -172,7 +172,7 @@ div[style*="display:flex"] > div:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 1;
 }
 
 .modul-border {
