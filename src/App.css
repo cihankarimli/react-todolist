@@ -43,7 +43,10 @@ body {
   transition: border-color 0.2s;
   outline: none;
 }
-
+.TodoCreate {
+  position: relative;
+  z-index: 1;
+}
 .TodoCreate input:focus {
   border-color: #4a90e2;
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
@@ -79,7 +82,10 @@ div[style*="width:100%,marginTop:50px"] {
   gap: 10px;
   margin-top: 30px;
 }
-
+.TodoList {
+  position: absolute;
+  z-index: 2;
+}
 div[style*="display:flex"] {
   display: flex !important;
   justify-content: space-between !important;
@@ -104,13 +110,13 @@ div[style*="display:flex"] > div:first-child {
   padding-right: 10px;
 }
 
-.todo-icons {
+.todo-delete {
   color: #888;
   font-size: 22px;
   transition: color 0.2s, transform 0.2s;
 }
 
-.todo-icons:hover {
+.todo-delete:hover {
   color: #e74c3c;
   transform: scale(1.1);
 }
@@ -140,6 +146,7 @@ div[style*="display:flex"] > div:first-child {
   cursor: pointer;
   transition: background-color 0.2s;
 }
+
 @media (max-width: 640px) {
   .main {
     padding: 20px;
@@ -154,4 +161,61 @@ div[style*="display:flex"] > div:first-child {
   .TodoCreate button {
     width: 100%;
   }
+}
+.modul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modul-border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 1000px;
+  width: 90%;
+  height: 600px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.modul-close {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.modul-border p {
+  font-size: 20px;
+}
+.open-modul-button {
+  color: #888;
+  font-size: 22px;
+  transition: color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.open-modul-button:hover {
+  color: black;
+  transform: scale(1.1);
 }

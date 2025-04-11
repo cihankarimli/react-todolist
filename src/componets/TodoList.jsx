@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Todo from "./Todo";
-import { useEffect } from "react";
 
 function TodoList({ todos, removeTodo }) {
   const [openPage, setOpenPage] = useState(false);
