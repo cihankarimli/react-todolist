@@ -114,7 +114,32 @@ div[style*="display:flex"] > div:first-child {
   color: #e74c3c;
   transform: scale(1.1);
 }
-
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.closeButton {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.open-button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 @media (max-width: 640px) {
   .main {
     padding: 20px;
