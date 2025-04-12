@@ -1,7 +1,11 @@
 import React from "react";
 
-function ToDoModul({ openModul, closeModul, todo }) {
-  const { content } = todo;
+function ToDoModul({ openModul, closeModul, removeTodo, todo }) {
+  const { content, id } = todo;
+  function onRemovetodo() {
+    removeTodo(id);
+  }
+
   return (
     <>
       {openModul && (
@@ -9,9 +13,14 @@ function ToDoModul({ openModul, closeModul, todo }) {
           <div className="modul-border">
             <h2>Modul</h2>
             <p> {content}</p>
-            <button className="modul-close" onClick={closeModul}>
-              close
-            </button>
+            <div className="modul-buttons">
+              <button className="modul-close" onClick={closeModul}>
+                close
+              </button>
+              <button onClick={onRemovetodo} className="remove-todo">
+                remove
+              </button>
+            </div>
           </div>
         </div>
       )}

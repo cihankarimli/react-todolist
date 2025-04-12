@@ -197,6 +197,7 @@ div[style*="display:flex"] > div:first-child {
   border: none;
   cursor: pointer;
   background-color: red;
+  width: 150px;
   color: white;
   border: none;
   border-radius: 6px;
@@ -218,4 +219,24 @@ div[style*="display:flex"] > div:first-child {
 .open-modul-button:hover {
   color: black;
   transform: scale(1.1);
+}
+.remove-todo {
+  font-size: 18px;
+  background: none;
+  border: none;
+  width: 160px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.modul-buttons {
+  display: flex;
+  gap: 650px;
 }

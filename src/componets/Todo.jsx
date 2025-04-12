@@ -3,16 +3,16 @@ import { CiCircleRemove } from "react-icons/ci";
 import { IoEyeOff } from "react-icons/io5";
 import ToDoModul from "./ToDoModul";
 function Todo({ todo, removeTodo, openPage }) {
-  const [openModul, setOpenModul] = useState(null);
+  const [openModul, setOpenModul] = useState(false);
   const { id, content } = todo;
   const onRemovetodo = () => {
     removeTodo(id);
   };
   const openingModul = () => {
-    setOpenModul(todo);
+    setOpenModul(true);
   };
   const closeModul = () => {
-    setOpenModul(null);
+    setOpenModul(false);
   };
   return (
     <>
@@ -42,7 +42,12 @@ function Todo({ todo, removeTodo, openPage }) {
           <IoEyeOff className="open-modul-button" onClick={openingModul} />
         </div>
       )}
-      <ToDoModul closeModul={closeModul} openModul={openModul} todo={todo} />
+      <ToDoModul
+        removeTodo={removeTodo}
+        closeModul={closeModul}
+        openModul={openModul}
+        todo={todo}
+      />
     </>
   );
 }
